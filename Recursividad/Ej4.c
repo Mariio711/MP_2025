@@ -3,22 +3,33 @@ calcule la longitud de la escalera más larga, es decir, la longitud de la secue
 consecutivos que se encuentre en A.*/
 int llamada_escalera(int *v, int n)
 {
-    if (n == 0) return 0;
-    if (n == 1) return 1;
+    if (n == 0)
+        return 0;
+    if (n == 1)
+        return 1;
 
-    return escalera(v, n, 1, 1);
+    return escalera(v, n, 1, 1, 1);
 }
-
 
 int escalera(int *v, int n, int i, int res, int actual)
 {
-    if (i >= n)
+    if (i == n)
     {
         return res;
     }
 
-    if(v[i] == v[i+1])
+    if ((v[i - 1] + 1) == v[i])
     {
-        res++;
+        actual++;
+        if (actual > res)
+        {
+            res = actual;
+        }
     }
+    else
+    {
+        actual = 1;
+    }
+    
+    return escalera(v, n, i + 1, res, actual);
 }
