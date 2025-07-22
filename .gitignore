@@ -1,0 +1,29 @@
+# Archivos objeto de C
+*.o
+
+# Archivos de dependencias y listados
+*.d
+*.lst
+
+# Binarios ejecutables
+*.out
+*.exe
+*.bin
+*.elf
+
+# Core dumps y archivos de depuración
+core
+*.stackdump
+
+# Archivos temporales y de respaldo
+*~
+*.swp
+
+# Archivos generados por editores
+.vscode/
+.idea/
+*.sublime-workspace
+*.sublime-project
+
+# Otros
+tags
